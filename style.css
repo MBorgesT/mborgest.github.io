@@ -1,0 +1,257 @@
+/* ================================ Page elems ================================ */
+
+html, body {
+    font-family: 'Manrope', sans-serif;
+}
+
+/*
+header {
+    padding-top: 56px;
+    padding-bottom: 64px;
+}
+*/
+
+body {
+    margin: 0;
+    /* Remove default body margin */
+    padding: 0;
+    /* Remove default body padding */
+}
+
+.page-container {
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+    /* Optional: Add max-width for better readability on large screens */
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.mosaic {
+    display: flex;
+}
+
+.mosaic-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--mosaic-gap);
+}
+
+/* ================================ Header ================================ */
+
+/* Header flex layout */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    padding-top: 56px;
+    padding-bottom: 64px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* spacing between elements */
+}
+
+/* Links & buttons styling */
+.header-link {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.header-link:hover {
+    color: rgb(0, 120, 200);
+}
+
+.header-icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    filter: invert(0.2); /* subtle styling, optional */
+    transition: filter 0.2s;
+}
+
+.header-icon:hover img {
+    filter: invert(0); /* highlight on hover */
+}
+
+.header-lang-btn {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background: none;
+    border: 1px solid rgb(34, 34, 34);
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.header-lang-btn:hover {
+    background: rgb(34, 34, 34);
+    color: white;
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: rgb(34, 34, 34);
+    margin: 0;
+}
+
+
+/* ================================ Sections ================================ */
+
+.section-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(34, 34, 34);
+    margin: 0 0 16px 0;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+section {
+    margin-bottom: 64px;
+}
+
+/* ================================ Lightbox ================================ */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+#lightbox-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.8);
+    border-radius: px;
+}
+
+.lightbox-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;          /* ✅ no background */
+    border: none;
+    color: rgb(51, 51, 51);
+    font-size: 48px;
+    cursor: pointer;
+    z-index: 1001;
+    user-select: none;
+    padding: 0;
+    line-height: 1;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: rgb(51, 51, 51);
+    font-size: 64px;
+    cursor: pointer;
+    z-index: 1002;
+    line-height: 1;
+    padding: 0;
+}
+
+.lightbox-close::before {
+    content: '';
+    position: absolute;
+    inset: -16px;
+}
+
+.lightbox-close:hover {
+    opacity: 0.7;
+}
+
+.lightbox-btn.left {
+    left: 24px;
+}
+
+.lightbox-btn.right {
+    right: 24px;
+}
+
+.lightbox-btn:hover {
+    opacity: 0.7;              /* subtle hover feedback */
+}
+
+.lightbox,
+#lightbox-image {
+    touch-action: pan-y;
+}
+
+/* ================================ Responsive setup ================================ */
+
+/* Desktop */
+:root {
+    --mosaic-gap: 48px;
+    --top-padding: 48px;
+    --side-padding: 86px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    :root {
+        --mosaic-gap: 32px;
+        --top-padding: 32px;
+        --side-padding: 48px;
+    }
+
+    .lightbox-btn {
+        display: none;
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    :root {
+        --mosaic-gap: 16px;
+        --top-padding: 12px;
+        --side-padding: 16px;
+    }
+
+    .lightbox-btn {
+        display: none;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .header-right {
+        gap: 16px;
+    }
+}
