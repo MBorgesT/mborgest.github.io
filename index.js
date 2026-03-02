@@ -39,7 +39,7 @@ let mosaicContainer;
 // Infrared section
 photoList = Array(13);
 for (let i = 0; i < 13; i++) {
-    photoList[i] = new PhotoImage('./images/infrared/' + i + '.jpg');
+    photoList[i] = new PhotoImage('../images/infrared/' + i + '.jpg');
 }
 
 mosaicContainer = document.getElementById('infrared-mosaic-container');
@@ -48,7 +48,7 @@ await createMosaicElement(photoList, mosaicContainer);
 // People section
 photoList = Array(14);
 for (let i = 0; i < 14; i++) {
-    photoList[i] = new PhotoImage('./images/people/' + i + '.jpg');
+    photoList[i] = new PhotoImage('../images/people/' + i + '.jpg');
 }
 
 mosaicContainer = document.getElementById('people-mosaic-container');
@@ -57,7 +57,7 @@ await createMosaicElement(photoList, mosaicContainer);
 // Portraits section
 photoList = Array(9);
 for (let i = 0; i < 9; i++) {
-    photoList[i] = new PhotoImage('./images/portraits/' + i + '.jpg');
+    photoList[i] = new PhotoImage('../images/portraits/' + i + '.jpg');
 }
 
 mosaicContainer = document.getElementById('portraits-mosaic-container');
@@ -66,7 +66,7 @@ await createMosaicElement(photoList, mosaicContainer);
 // Landscapes/Other section
 photoList = Array(15);
 for (let i = 0; i < 15; i++) {
-    photoList[i] = new PhotoImage('./images/landscapes-other/' + i + '.jpg');
+    photoList[i] = new PhotoImage('../images/landscapes-other/' + i + '.jpg');
 }
 
 mosaicContainer = document.getElementById('landscapes-other-mosaic-container');

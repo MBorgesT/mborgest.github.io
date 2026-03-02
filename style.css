@@ -45,8 +45,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 32px 0;
-    padding-top: 56px;
-    padding-bottom: 64px;
+    padding-top: 36px;
+    padding-bottom: 28px;
 }
 
 .header-left {
@@ -254,4 +254,43 @@ section {
     .header-right {
         gap: 16px;
     }
+}
+
+/* ================================ Contact Page ================================ */
+
+body.contact-page {
+    height: 100vh;
+    overflow: hidden; /* 🚫 disables scrolling */
+}
+
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* full viewport */
+}
+
+.contact-main {
+    flex: 1; /* fills space between header and footer */
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 🔥 crops image to fill */
+    display: block;
+}
+
+/* Remove side padding only on contact layout */
+.contact-layout {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Reapply padding to header and footer only */
+.contact-layout .site-header,
+.contact-layout footer {
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
 }
