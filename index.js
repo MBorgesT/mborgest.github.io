@@ -1,36 +1,4 @@
 import { PhotoImage, createMosaicElement } from './photo_mosaic.js';
-//import { portfolioText } from './page_text.js';
-
-
-/* ========================= Handling page text and translation ========================= */
-/*
-let currentLang = 'pt';
-
-const langBtn = document.querySelector('.header-lang-btn');
-
-function updateLanguage(lang) {
-    currentLang = lang;
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.dataset.i18n;
-        if (portfolioText[lang][key]) {
-            el.textContent = portfolioText[lang][key];
-        }
-    });
-
-    // Update button text
-    langBtn.textContent = lang.toUpperCase() === 'EN' ? 'PT' : 'EN';
-}
-
-// Initial load
-updateLanguage(currentLang);
-
-// Switch language on button click
-langBtn.addEventListener('click', () => {
-    const newLang = currentLang === 'en' ? 'pt' : 'en';
-    updateLanguage(newLang);
-});
-*/
 
 
 /* ========================= Populating the photo mosaics ========================= */
