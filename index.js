@@ -1,8 +1,9 @@
 import { PhotoImage, createMosaicElement } from './photo_mosaic.js';
-import { portfolioText } from './page_text.js';
+//import { portfolioText } from './page_text.js';
 
 
 /* ========================= Handling page text and translation ========================= */
+/*
 let currentLang = 'pt';
 
 const langBtn = document.querySelector('.header-lang-btn');
@@ -29,6 +30,7 @@ langBtn.addEventListener('click', () => {
     const newLang = currentLang === 'en' ? 'pt' : 'en';
     updateLanguage(newLang);
 });
+*/
 
 
 /* ========================= Populating the photo mosaics ========================= */
