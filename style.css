@@ -265,14 +265,20 @@ section {
 /* ================================ Contact Page ================================ */
 
 body.contact-page {
-    margin: 0;
+    height: 100vh;      /* fallback for older browsers */
+    height: 100dvh;
     overflow: hidden;
 }
 
 .contact-layout {
     display: flex;
     flex-direction: column;
-    min-height: 100dvh; /* 🔥 dynamic viewport height */
+    height: 100vh;      /* fallback */
+    height: 100dvh;
+}
+
+.contact-layout footer p {
+    margin: 0;          /* remove extra space from the paragraph */
 }
 
 .contact-main {
