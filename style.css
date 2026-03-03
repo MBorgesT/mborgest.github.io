@@ -265,14 +265,14 @@ section {
 /* ================================ Contact Page ================================ */
 
 body.contact-page {
-    height: 100vh;
-    overflow: hidden; /* 🚫 disables scrolling */
+    margin: 0;
+    overflow: hidden;
 }
 
 .contact-layout {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* full viewport */
+    min-height: 100dvh; /* 🔥 dynamic viewport height */
 }
 
 .contact-main {
