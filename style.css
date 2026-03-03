@@ -331,3 +331,50 @@ body.contact-page {
 .contact-overlay a:hover {
     color: #00aaff;
 }
+
+
+/* ================================ Contact Page Enhancements ================================ */
+
+body.contact-page {
+    background-image: url('../images/landscapes-other/12.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* keeps image fixed while content sits above */
+}
+
+/* White header elements */
+.contact-page .site-header .header-title,
+.contact-page .site-header .header-link {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.contact-page .site-header .header-lang-link {
+    border-color: white;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.contact-page .site-header .header-icon img {
+    filter: brightness(0) invert(1); /* turns black icon to white */
+}
+
+/* Optional hover effects */
+.contact-page .site-header .header-link:hover {
+    color: #ddd;
+}
+.contact-page .site-header .header-lang-link:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}
+.contact-page .site-header .header-icon:hover img {
+    filter: brightness(0) invert(0.8);
+}
+
+/* White footer text */
+.contact-page footer {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
