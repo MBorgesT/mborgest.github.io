@@ -277,10 +277,6 @@ body.contact-page {
     height: 100dvh;
 }
 
-.contact-layout footer p {
-    margin: 0;          /* remove extra space from the paragraph */
-}
-
 .contact-main {
     flex: 1; /* fills space between header and footer */
     position: relative;
