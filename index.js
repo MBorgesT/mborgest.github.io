@@ -58,16 +58,6 @@ mosaicContainer = document.getElementById('people-mosaic-container');
 await createMosaicElement(photoList, mosaicContainer);
 document.getElementById('loading-people').style.display = 'none';
 
-// Portraits section
-photoList = Array(9);
-for (let i = 0; i < 9; i++) {
-    photoList[i] = new PhotoImage('../images/portraits/' + i + '.jpg');
-}
-
-mosaicContainer = document.getElementById('portraits-mosaic-container');
-await createMosaicElement(photoList, mosaicContainer);
-document.getElementById('loading-portraits').style.display = 'none';
-
 // Landscapes/Other section
 photoList = Array(15);
 for (let i = 0; i < 15; i++) {
@@ -77,3 +67,13 @@ for (let i = 0; i < 15; i++) {
 mosaicContainer = document.getElementById('landscapes-other-mosaic-container');
 await createMosaicElement(photoList, mosaicContainer);
 document.getElementById('loading-landscapes-other').style.display = 'none';
+
+// Portraits section
+photoList = Array(9);
+for (let i = 0; i < 9; i++) {
+    photoList[i] = new PhotoImage('../images/portraits/' + i + '.jpg');
+}
+
+mosaicContainer = document.getElementById('portraits-mosaic-container');
+await createMosaicElement(photoList, mosaicContainer);
+document.getElementById('loading-portraits').style.display = 'none';
