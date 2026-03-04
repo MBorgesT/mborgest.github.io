@@ -114,6 +114,27 @@ body {
 
 /* ================================ Sections ================================ */
 
+.about-section {
+    margin-bottom: 64px; /* matches section spacing */
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.25rem;    /* ~20px */
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgb(34, 34, 34);
+}
+
+@media (max-width: 600px) {
+    .about-text {
+        font-size: 1.125rem; /* ~18px */
+        text-align: left;     /* better readability on small screens */
+    }
+}
+
 .sections-container {
     margin-top: var(--top-padding);
 }
@@ -330,6 +351,55 @@ body.contact-page {
 
 .contact-overlay a:hover {
     color: #00aaff;
+}
+
+/* Text */
+.contact-overlay.elegant {
+    background: rgba(0, 0, 0, 0.35); /* slightly lighter */
+    backdrop-filter: blur(4px);      /* subtle glass effect */
+    padding: 40px 48px;
+}
+
+.contact-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.contact-email {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 0.5rem 0 1rem;
+    word-break: break-word; /* ensures long email wraps */
+}
+
+.contact-email a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    transition: border-color 0.2s;
+}
+
+.contact-email a:hover {
+    border-bottom-color: white;
+}
+
+.contact-note {
+    font-size: 0.9375rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .contact-email {
+        font-size: 1.1rem;
+    }
+    .contact-overlay.elegant {
+        padding: 24px 16px;
+    }
 }
 
 
