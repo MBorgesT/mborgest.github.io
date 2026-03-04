@@ -8,7 +8,7 @@ let mosaicContainer;
 
 // Infrared section
 photoList = Array(13);
-for (let i = 0; i < 13; i++) {
+for (let i = 0; i < 16; i++) {
     photoList[i] = new PhotoImage('../images/infrared/' + i + '.jpg');
 }
 
